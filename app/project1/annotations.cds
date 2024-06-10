@@ -36,14 +36,22 @@ annotate service.Books with @(
         },
         {
             $Type : 'UI.DataField',
-            Label : 'title',
+            Label : 'Title',
             Value : title,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'stock',
+            Label : 'Stock',
             Value : stock,
         },
     ],
 );
 
+annotate service.Books with @(
+    UI.SelectionFields : [
+        title,
+    ]
+);
+annotate service.Books with {
+    title @Common.Label : 'Title'
+};
